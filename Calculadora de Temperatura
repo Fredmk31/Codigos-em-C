@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() {
+   
+   int escolha;
+   float temp,conversão;
+   
+   //Escolha tipo de temperatura//
+   printf("Digite uma categoria\n");
+   printf("Celsius(1)\n");
+   printf("fahrenheit(2)\n");
+   printf("Kelvin(3)\n");
+   printf("Digite o tipo de temperatura: 1/2/3\n");
+   scanf("%d", &escolha);
+   
+      //Solicite a temperatura//
+   printf("Digite uma temperatura em Celsius:");
+   scanf("%f",&temp);
+   
+  //Executa a conversão//
+   switch (escolha){
+     
+     case 1:
+         
+         conversão = temp = temp;
+         printf("Resultado: %f",conversão);
+         break;
+    
+     case 2:
+    
+       conversão = temp * 9/5 + 32;
+       printf("Resultado: %f",conversão);
+       break;
+       
+    case 3:
+        
+       conversão = temp - 273.15;
+       printf("Resultado: %f",conversão);
+       break;
+         
+         //Opção invalida//
+         default:
+            printf("Opção inválida.\n");
+            break;
+        
+    }  
+   
+   return 0;
+}
